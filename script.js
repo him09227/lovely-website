@@ -1,5 +1,37 @@
 const btn = document.getElementById("startBtn");
+const hero = document.getElementById("hero");
+const scene2 = document.getElementById("scene2");
 
 btn.onclick = () => {
-    alert("Welcome to our magical journey ❤️");
+
+hero.classList.add("fadeOut");
+
+for(let i=0;i<25;i++){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.bottom="-50px";
+
+heart.style.animationDuration=2+Math.random()*3+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),5000);
+
+}
+
+setTimeout(()=>{
+
+hero.style.display="none";
+
+scene2.classList.remove("hidden");
+
+},800);
+
 };
