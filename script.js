@@ -28,9 +28,7 @@ setTimeout(()=>heart.remove(),5000);
 
 setTimeout(()=>{
 
-hero.style.display="none";
-
-scene2.classList.remove("hidden");
+scene2.classList.add("show");
 
 },800);
 
