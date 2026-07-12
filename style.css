@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9ec4,#ffc8dd,#cdb4db,#a2d2ff);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero{
+    width:90%;
+    max-width:700px;
+    padding:50px;
+    text-align:center;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.8;
+    opacity:.95;
+}
+
+button{
+    margin-top:35px;
+    padding:16px 38px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    cursor:pointer;
+    background:white;
+    color:#ff4d8d;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.08);
+    box-shadow:0 15px 35px rgba(255,255,255,.4);
+}
