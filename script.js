@@ -51,3 +51,52 @@ star.style.animationDelay=Math.random()*2+"s";
 stars.appendChild(star);
 
 }
+const title = "Hey Beautiful ❤️";
+const subtitle = "I've been waiting for you... Welcome to this magical little world.";
+
+const typing = document.getElementById("typing");
+const sub = document.getElementById("subtitle");
+const continueBtn = document.getElementById("continueBtn");
+
+function typeText(text, element, speed, callback){
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+element.innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,speed);
+
+}else if(callback){
+
+callback();
+
+}
+
+}
+
+type();
+
+}
+
+setTimeout(()=>{
+
+typing.innerHTML="";
+sub.innerHTML="";
+
+typeText(title,typing,80,()=>{
+
+typeText(subtitle,sub,35,()=>{
+
+continueBtn.classList.remove("hidden");
+
+});
+
+});
+
+},900);
