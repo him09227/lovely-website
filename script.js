@@ -153,3 +153,15 @@ document
 },2000);
 
 };
+
+const cat = document.getElementById("catMascot");
+
+cat.addEventListener("click", ()=>{
+
+    cat.innerHTML="😻";
+
+    setTimeout(()=>{
+        cat.innerHTML="🐱";
+    },1000);
+
+});
