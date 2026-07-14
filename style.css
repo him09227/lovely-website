@@ -338,3 +338,101 @@ transform:scale(1.2);
 opacity:0;
 pointer-events:none;
 }
+
+/* ---------- CLOUDS ---------- */
+
+.cloud{
+    position:absolute;
+    width:220px;
+    height:70px;
+
+    background:rgba(255,255,255,.28);
+
+    border-radius:100px;
+
+    filter:blur(3px);
+
+    animation:cloudMove 40s linear infinite;
+}
+
+.cloud::before{
+
+content:"";
+
+position:absolute;
+
+width:90px;
+height:90px;
+
+background:inherit;
+
+border-radius:50%;
+
+left:25px;
+top:-30px;
+
+}
+
+.cloud::after{
+
+content:"";
+
+position:absolute;
+
+width:110px;
+height:110px;
+
+background:inherit;
+
+border-radius:50%;
+
+right:30px;
+top:-45px;
+
+}
+
+.cloud1{
+
+top:12%;
+
+left:-260px;
+
+animation-duration:45s;
+
+}
+
+.cloud2{
+
+top:30%;
+
+left:-320px;
+
+animation-duration:60s;
+
+}
+
+.cloud3{
+
+top:55%;
+
+left:-250px;
+
+animation-duration:52s;
+
+}
+
+@keyframes cloudMove{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(calc(100vw + 500px));
+
+}
+
+}
