@@ -510,3 +510,33 @@ transform:translateX(calc(100vw + 500px));
 }
 
 }
+
+/* ---------- SHOOTING STAR ---------- */
+
+.shooting-star{
+    position:fixed;
+    width:150px;
+    height:2px;
+
+    background:linear-gradient(to right, white, transparent);
+
+    transform:rotate(-35deg);
+
+    animation:shoot 1.5s linear forwards;
+
+    z-index:-1;
+}
+
+@keyframes shoot{
+
+0%{
+    opacity:1;
+    transform:translate(0,0) rotate(-35deg);
+}
+
+100%{
+    opacity:0;
+    transform:translate(500px,500px) rotate(-35deg);
+}
+
+}
