@@ -211,3 +211,21 @@ transform:scale(2);
 }
 
 }
+#typing{
+font-size:2.5rem;
+font-weight:700;
+margin-bottom:20px;
+min-height:70px;
+}
+
+#subtitle{
+font-size:1.2rem;
+line-height:1.8;
+max-width:500px;
+margin-bottom:35px;
+opacity:.9;
+}
+
+#continueBtn{
+transition:.5s;
+}
