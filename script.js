@@ -141,3 +141,15 @@ yesBtn.onclick = () => {
     `;
 
 };
+
+window.onload = () => {
+
+setTimeout(() => {
+
+document
+.getElementById("loader")
+.classList.add("hide");
+
+},2000);
+
+};
