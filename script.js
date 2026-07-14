@@ -110,3 +110,34 @@ scene2.classList.remove("show");
 proposal.classList.add("show");
 
 };
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseenter", moveNoButton);
+noBtn.addEventListener("touchstart", moveNoButton);
+
+function moveNoButton(){
+
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 80);
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+
+}
+
+const yesBtn = document.getElementById("yesBtn");
+
+yesBtn.onclick = () => {
+
+    document.body.innerHTML = `
+        <div class="success">
+            <h1>❤️ Yayyyyy! ❤️</h1>
+            <h2>You made my day 🥹</h2>
+            <p>Thank you for saying Yes!</p>
+            <div class="big-heart">💖</div>
+        </div>
+    `;
+
+};
