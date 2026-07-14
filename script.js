@@ -131,13 +131,25 @@ const yesBtn = document.getElementById("yesBtn");
 
 yesBtn.onclick = () => {
 
-    document.body.innerHTML = `
-        <div class="success">
-            <h1>❤️ Yayyyyy! ❤️</h1>
-            <h2>You made my day 🥹</h2>
-            <p>Thank you for saying Yes!</p>
-            <div class="big-heart">💖</div>
-        </div>
+    confetti({
+        particleCount:180,
+        spread:90,
+        origin:{y:0.6}
+    });
+
+    document.body.innerHTML=`
+    <div class="success">
+        <h1>❤️ Yay! ❤️</h1>
+        <h2>You made my day 🥹</h2>
+        <p>Thank you for saying Yes!</p>
+
+        <div class="big-heart">💖</div>
+
+        <button onclick="location.reload()">
+            Restart Story 🔄
+        </button>
+
+    </div>
     `;
 
 };
