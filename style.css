@@ -267,3 +267,40 @@ padding:15px 30px;
 border-radius:40px;
 font-size:18px;
 }
+
+.success{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+animation:fadeIn 1s;
+}
+
+.success h1{
+font-size:4rem;
+}
+
+.success h2{
+margin:20px 0;
+font-size:2rem;
+}
+
+.big-heart{
+font-size:120px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.2);
+}
+
+}
