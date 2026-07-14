@@ -165,3 +165,40 @@ cat.addEventListener("click", ()=>{
     },1000);
 
 });
+
+document.addEventListener("click",(e)=>{
+
+    // ❤️ Heart
+    const heart=document.createElement("div");
+    heart.className="click-heart";
+    heart.innerHTML="❤️";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },1200);
+
+    // ✨ Sparkles
+    for(let i=0;i<6;i++){
+
+        const sparkle=document.createElement("div");
+
+        sparkle.className="sparkle";
+
+        sparkle.innerHTML="✨";
+
+        sparkle.style.left=(e.clientX+(Math.random()*60-30))+"px";
+
+        sparkle.style.top=(e.clientY+(Math.random()*60-30))+"px";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(()=>{
+            sparkle.remove();
+        },800);
+
+    }
+
+});
