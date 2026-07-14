@@ -202,3 +202,25 @@ document.addEventListener("click",(e)=>{
     }
 
 });
+
+// 🌠 Shooting Star
+
+function createShootingStar(){
+
+    const star=document.createElement("div");
+
+    star.className="shooting-star";
+
+    star.style.left=Math.random()*window.innerWidth+"px";
+
+    star.style.top=Math.random()*200+"px";
+
+    document.body.appendChild(star);
+
+    setTimeout(()=>{
+        star.remove();
+    },1500);
+
+}
+
+setInterval(createShootingStar,6000);
