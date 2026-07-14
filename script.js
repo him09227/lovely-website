@@ -100,3 +100,14 @@ continueBtn.classList.remove("hidden");
 });
 
 },900);
+
+const continueBtn = document.getElementById("continueBtn");
+const proposal = document.getElementById("proposal");
+
+continueBtn.onclick = () => {
+
+scene2.classList.remove("show");
+
+proposal.classList.add("show");
+
+};
