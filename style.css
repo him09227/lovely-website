@@ -466,3 +466,47 @@ transform:translateX(calc(100vw + 500px));
 }
 
 }
+
+/* ---------- SPARKLES ---------- */
+
+.sparkle{
+    position:fixed;
+    pointer-events:none;
+    font-size:18px;
+    animation:sparkleAnim .8s forwards;
+}
+
+@keyframes sparkleAnim{
+
+0%{
+    transform:translateY(0) scale(.5);
+    opacity:1;
+}
+
+100%{
+    transform:translateY(-70px) scale(1.8);
+    opacity:0;
+}
+
+}
+
+.click-heart{
+    position:fixed;
+    pointer-events:none;
+    font-size:24px;
+    animation:heartBurst 1.2s forwards;
+}
+
+@keyframes heartBurst{
+
+0%{
+    transform:scale(.3);
+    opacity:1;
+}
+
+100%{
+    transform:translateY(-120px) scale(2);
+    opacity:0;
+}
+
+}
